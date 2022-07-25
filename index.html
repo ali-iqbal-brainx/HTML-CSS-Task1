@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		@media only screen and (max-width: 620px) {
+			.menu,
+			.main,
+			.right {
+				width: 100%;
+			}
+		}
+		table
+		{
+			border: 1px solid black;
+			border-collapse: collapse;
+			padding: 5px;
+		}
+		td {
+			padding: 5px;
+		}
+
+		input {
+			display: block;
+			border-radius: 3px;
+			border: 1px solid gray;
+			height: 20px;
+
+		}
+
+		button {
+			background-color: rgb(102, 29, 4);
+			/* Green */
+			border: none;
+			color: white;
+			padding: 12px 30px;
+			text-align: center;
+			text-decoration: none;
+			font-size: 16px;
+		}
+		h2{
+			color: rgb(102, 29, 4);
+		}
+		.main_div{
+			display: flex; 
+			align-items: center; 
+			justify-content: center;
+			
+		}
+		.sDiv{
+			height: 10px;
+			width: auto;
+			background-color: rgb(102, 29, 4);
+		}
+		
+	</style>
+</head>
+
+<body>
+	<div  class="main_div">
+		<form>
+			<div class="sDiv">
+
+			</div>
+			<table>
+				<tr>
+					<td colspan="4">
+						<h1 style="text-align: center;">Job Application</h1>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<h2>Personal Information</h2>
+					</td>
+				</tr>
+				<tr>
+
+					<td>
+						<label><b>Name</b></label>
+					</td>
+					<td>
+						<label for="fn" style="font-size: 12px;"><input type="text" name="fn" required/>First Name</label>
+					</td>
+
+
+					<td colspan="2">
+						<label for="ln" style="font-size: 12px;"><input name="Last_Name" id="Last_Name" required/>Last
+							Name</label>
+					</td>
+
+				</tr>
+				<tr>
+					<td>
+						<label><b>Email</b></label>
+					</td>
+					<td colspan="4">
+						<input name="Email_Address" type="text" placeholder="user@example.com" size="40" required/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label><b>Education</b></label>
+					</td>
+					<td colspan="4">
+						<input list="edu" placeholder="Please Choose" size="40" required/>
+						<datalist id="edu">
+							<option value="Matriculation">
+							<option value="Intermediate">
+							<option value="Graduation">
+							<option value="Postgraduation">
+						</datalist>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label><b>Resume</b></label>
+					</td>
+					<td colspan="4">
+						<input type="file" name="fileupload" value="fileupload" size="40" id="fileupload" required/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label><b>Address</b></label>
+					</td>
+					<td colspan="4">
+						<label for="add1" style="font-size: 12px;"><input name="add" type="text" size="40" required/> Address
+							1</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+
+					</td>
+					<td colspan="4">
+						<label for="add2" style="font-size: 12px;"><input name="add2" type="text" size="40" /> Address
+							2</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+
+					</td>
+					<td colspan="4">
+						<label for="country" style="font-size: 12px; text-align: justify;">
+							<input list="country" placeholder="Select a Country" size="40" required/>
+							<datalist id="country">
+								<option value="Pakistan">
+								<option value="India">
+								<option value="Iran">
+								<option value="China">
+							</datalist>
+							Country</label>
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+
+					</td>
+					<td>
+						<label for="city" style="font-size: 12px;"><input name="City" type="text"
+								size="25" required/>City</label>
+					</td>
+					<td colspan="">
+
+
+						<label for="state" style="font-size: 12px;"><input name="state" type="text"
+								size="10" required/>State</label>
+
+					</td>
+					<td>
+						<label for="zip" style="font-size: 12px;"><input name="zip" type="number" size="3" required/>Zip
+							Code</label>
+					</td>
+				</tr>
+				<tr>
+					<td><b>Phone Number</b></td>
+					<td colspan="3">
+						<input name="code" type="tel" size="2" style="display: inline; flex-direction: row;" required/>
+						<input name="phone" type="tel" size="17" style="display: inline; flex-direction: row;"required/>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<label><b>What are Your Hobbies?</b></label> <br />
+						<input name="hobby" type="text" size="65" required/>
+					</td>
+
+				</tr>
+
+				<tr>
+					<td colspan="4">
+						<h2>Precious/Current Employment Details</h2>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<label><b>Company Name</b></label>
+					</td>
+					<td colspan="3">
+						<input name="cName" type="text" size="40" required/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="jTitle"><b>Job Title</b></label>
+					</td>
+					<td colspan="3">
+						<input name="jTitle" type="text" size="40" required/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label><b>How long were you here?</b></label>
+					</td>
+					<td colspan="3">
+						<input name="desc" type="text" size="40" required/>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="4">
+						<h2>Refrence #1</h2>
+					</td>
+				</tr>
+
+
+				<tr>
+					<td>
+						<label><b>Name</b></label>
+					</td>
+					<td colspan="3">
+						<input name="r1Name" type="text" size="40" required/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label><b>Phone</b></label>
+					</td>
+					<td colspan="3">
+						<input name="r1Phone" type="text" size="40" required/>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="4">
+						<h2>Refrence #2</h2>
+					</td>
+				</tr>
+
+
+				<tr>
+					<td>
+						<label><b>Name</b></label>
+					</td>
+					<td colspan="3">
+						<input name="r2Name" type="text" size="40" required/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label><b>Phone</b></label>
+					</td>
+					<td colspan="3">
+						<input name="r2Phone" type="text" size="40" required/>
+					</td>
+				</tr>
+
+
+				<tr>
+					<td colspan="4" style="text-align: center;">
+						<button type="submit">Apply</button>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>
